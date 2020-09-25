@@ -221,7 +221,6 @@ export default class Game extends Component {
             <button className="playGame" onClick={() => this.clearGame()}>
               Clear
             </button>
-            {/* <button onClick={() => this.renderBoard()}>Clear</button> */}
           </div>
         </div>
         <div className="boardContainer">{this.renderBoard()}</div>
