@@ -83,6 +83,22 @@ export default class Game extends Component {
     }
   }
 
+  next() {
+    this.setState({
+      rules: this.state.rules.addGen(),
+    });
+    this.setState(
+      {
+        gameRunning: false,
+      },
+      () => {
+        if (this.intervalRef) {
+          clearInterval(this.intervalRef);
+        }
+      }
+    );
+  }
+
   stopGame() {
     this.setState(
       {
@@ -226,6 +242,9 @@ export default class Game extends Component {
             </button>
             <button className="playGame" onClick={() => this.stopGame()}>
               Stop
+            </button>
+            <button className="playGame" onClick={() => this.next()}>
+              Next
             </button>
             <button className="playGame" onClick={() => this.clearGame()}>
               Clear
