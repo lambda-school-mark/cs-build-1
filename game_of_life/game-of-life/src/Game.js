@@ -166,6 +166,15 @@ export default class Game extends Component {
       <div className="worldContainer">
         <div className="headerContainer">
           <div className="headerInnerContainer">
+            <h1> Game of Life </h1>
+            <h3>Rules:</h3>
+            <p>
+              1. Any live cell with two or three live neighbours survives.
+              <br></br> 2. Any dead cell with three live neighbours becomes a
+              live cell.<br></br> 3. All other live cells die in the next
+              generation. Similarly, all other dead cells stay dead.
+            </p>
+            <br></br>
             <label className="label">
               Rows:
               <input
